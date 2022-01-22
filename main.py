@@ -6,7 +6,8 @@ import inquirer
 
 class TrashAnalyser:
     files = []
-    default_trash_path = '/mnt/c/Users/rafae.DESKTOP-RS4NIMH/Downloads'
+    #Setar o caminho da aplicacao
+    default_trash_path = ''
     executor = os
 
     def __init__(self):
@@ -64,7 +65,6 @@ class TrashFile:
         self.name=name
         self.extension=extension if extension.startswith('.') else "."+extension
         self.modification_date = modification_date
-        #datetime.datetime.fromtimestamp(modification_date).strftime('%d-%m-%Y %H:%M:%S')
 
     def ask_if_delete(self):
         questions = [
